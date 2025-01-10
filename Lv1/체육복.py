@@ -1,13 +1,9 @@
 def solution(n, lost, reserve):
-    answer = n - len(lost)
-    count = 0
-    for l in lost:
-        if l in reserve:
-            count += 1
-            reserve.remove(l)
-            lost.remove(l)
-            
-    answer += count
+    commons = set(lost) & set(reserve)
+    answer = n - len(lost) + len(commons)
+    
+    lost = [x for x in lost if x not in commons]
+    reserve = [x for x in reserve if x not in commons]
     
     for l in sorted(lost):
         if l-1 in sorted(reserve):
