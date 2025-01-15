@@ -26,6 +26,7 @@ def solution(mats, park):
 
 
 
+
 # def solution(mats, park):
 #     answer = 0
 #     park = [["1"]+ row + ["1"] for row in park] #side barrier
@@ -52,4 +53,4 @@ def solution(mats, park):
 #             print(idx)
             
 #         print(i,j,w)
-    return answer
+# return answer
